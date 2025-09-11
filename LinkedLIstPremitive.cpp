@@ -57,7 +57,9 @@ void InsEnd(node*& head, int val){
  }
 int main()
 {
-node * start=new node(1);
+node * start=nullptr;
+
+InsBeg(start,1);
 InsEnd(start,2);
 InsEnd(start,3);
 InsEnd(start,4);
