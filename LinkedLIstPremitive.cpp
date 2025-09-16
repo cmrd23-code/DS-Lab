@@ -24,24 +24,24 @@ void InsEnd(node*& head, int val){
      }
         node* temp = head; 
         head = head->next; 
-        int item=temp->info;
+        int x=temp->info;
         delete temp; 
-        return item;
+        return x;
     }
  int DeleteLastNode(node*& head) {
     if (head == nullptr) 
       return -1;
 
-    node* temp1, *temp2 = head; 
-    while(temp2->next!=nullptr)
+    node* temp2, *temp1 = head; 
+    while(temp1->next!=nullptr)
      {
-        temp1=temp2;
-        temp2=temp2->next;
+        temp2=temp1;
+        temp1=temp1->next;
      }
-        temp1->next=nullptr;
-        int item=temp2->info;
-        delete temp2; 
-        return item;
+        temp2->next=nullptr;
+        int x=temp1->info;
+        delete temp1; 
+        return x;
     }
  void Traverse(node* head)
  {
